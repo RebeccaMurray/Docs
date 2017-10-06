@@ -260,12 +260,12 @@ For more information on these three signals, refer to wikipedia:
 
 ![Electrode Connections 1](../assets/images/electrodeConnections1.JPG)
 
-1. Connect the white electrode to the SRB2 pin (the bottom SRB pin). The SRB2 pin is the default "reference pin" for your OpenBCI input channels.
-2. Connect the black electrode to the bottom BIAS pin. The BIAS pin is similar to the ground pin of common EEG systems, but it uses destructive interference waveform techniques to eliminate the "common mode noise" of all of the active channels.
-3. Connect the purple electrode to the 2N pin (the bottom pin of the N2P input)
-4. Connect the green electrode to the 4N pin (the bottom pin of the N4P input)
-5. Connect the blue electrode to the 4P pin (the top pin of the N4P input)
-6. Connect the red electrode to the 7N pin (the bottom pin of the N7P input)
+1. Connect the white wire from the gold cup electrodes to the SRB2 pin (the bottom SRB pin). The SRB2 pin is the default "reference pin" for your OpenBCI input channels.
+2. Connect the black electrode wire to the bottom BIAS pin. The BIAS pin is similar to the ground pin of common EEG systems, but it uses destructive interference waveform techniques to eliminate the "common mode noise" of all of the active channels.
+3. Connect the purple electrode wire to the 2N pin (the bottom pin of the N2P input)
+4. Connect the green electrode wire to the 4N pin (the bottom pin of the N4P input)
+5. Connect the blue electrode wire to the 4P pin (the top pin of the N4P input)
+6. Connect the red electrode wire to the 7N pin (the bottom pin of the N7P input)
 
 ![Electrode Connections 2](../assets/images/electrodeConnections2.JPG)
 
@@ -287,7 +287,7 @@ b) Now apply this electrode to either one of your earlobes (either A1 or A2 as s
 
 ![Fp2](../assets/images/Fp2.JPG)
 
-c) Follow the same procedure for the purple electrode and apply it to your forehead 1 inch above your left eyebrow (as if you were looking at yourself) and an inch to the left of your forehead's centerline.
+c) Follow the same procedure for the purple electrode and apply it to your forehead 1 inch above your left eyebrow (as if you were looking at yourself) and an inch to the left of your forehead's centerline. Gently pull the colored electrode wires apart if needed.
 
 ![1020](../assets/images/1020.jpg)
 
@@ -316,7 +316,7 @@ g) Finally, connect the blue electrode to your wrist on the opposite arm with th
 
 ### 4. Launch the GUI and adjust your channel settings
 
-a) If your OpenBCI GUI is not already running, relaunch it and configure the DATA SOURCE mode to LIVE (from OpenBCI). Refer to **section IV** of this guide for more information on this process. Since we are only using 3 channels, set the channel count to 8, even if you have a daisy system. Nothing will go wrong if you start the system with 16 channels, except the EEG DATA montage will be unnecessarily cluttered.
+a) If your OpenBCI GUI is not already running, launch it and select LIVE (from Cyton) under DATA SOURCE, Serial (from Dongle) under PICK TRANSFER PROTOCOL, and your dongle's serial/COM port name (beginning with "dev/tty/..."). Refer to **section IV** of this guide for more information on this process. Since we are only using 3 channels, set the channel count to 8, even if you have a daisy system. Nothing will go wrong if you start the system with 16 channels, except the EEG DATA montage will be unnecessarily cluttered.
 
 b) Once you have pressed START SYSTEM and the GUI has connected to your OpenBCI device, exit the SYSTEM CONTROL PANEL and start the live data stream. You should see live data from your body (and the unattached channels) streaming into the EEG DATA montage on the left side of the GUI.
 
