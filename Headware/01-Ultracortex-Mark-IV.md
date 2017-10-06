@@ -50,7 +50,7 @@ The following parts are included in the Unassembled and the Print it Yourself ve
 * Flat units
 	* (**2x**) Dry (non-spikey) electrodes to be installed in Ultracortex nodes without hair (forehead, for instance): (https://github.com/OpenBCI/Docs/blob/master/assets/MarkIV/Photos/FlatUnits.JPG)
 * Comfort units
-	* (**5x**) Comfort units used for relieving weight reuse of headsett: (https://github.com/OpenBCI/Docs/blob/master/assets/MarkIV/Photos/ConfortUnits.JPG)	
+	* (**5x**) Comfort units used for relieving weight reuse of headset: (https://github.com/OpenBCI/Docs/blob/master/assets/MarkIV/Photos/ComfortUnits.JPG)	
 	
 * Ear Clips
 	* (**2x**) Ear Clip electrode: (https://github.com/OpenBCI/Docs/blob/master/assets/MarkIV/Photos/EarClips.JPG)
@@ -77,7 +77,7 @@ The following parts are not included with the purchase of any configuration of t
 ####(21x) MECH_PARTS
 
 * [MECH_PARTS](https://github.com/OpenBCI/Ultracortex/tree/master/Mark_IV/M4_Released/STL's/Mech_Parts/M4_Hardware_insert.STL)
-	* [INCERTS](https://github.com/OpenBCI/Ultracortex/tree/master/Mark_IV/M4_Released/STL's/Mech_Parts/M4_Hardware_insert.STL) (**x35**) — .STLs ([tight](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Hardware_insert_105dot5_percent.STL) / [loose](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Hardware_insert_106_percent.STL)) (Choose one configuration and modify accordingly)
+	* [INSERTS](https://github.com/OpenBCI/Ultracortex/tree/master/Mark_IV/M4_Released/STL's/Mech_Parts/M4_Hardware_insert.STL) (**x35**) — .STLs ([tight](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Hardware_insert_105dot5_percent.STL) / [loose](https://github.com/OpenBCI/Docs/raw/master/assets/MarkIV/STL_Directory/M4_Hardware_insert_106_percent.STL)) (Choose one configuration and modify accordingly)
 
 ####(1x) BOARD_HOLDER
 
@@ -125,7 +125,7 @@ The following parts are not included with the purchase of any configuration of t
 ![image](../assets//MarkIV/Photos/FlatUnits.JPG)
 
 * Comfort units
-	* (**5x**) Comfort units used for relieving weight reuse of headsett: (https://github.com/OpenBCI/Docs/blob/master/assets/MarkIV/Photos/ConfortUnits.JPG)
+	* (**5x**) Comfort units used for relieving weight reuse of headset: (https://github.com/OpenBCI/Docs/blob/master/assets/MarkIV/Photos/ComfortUnits.JPG)
 	
 ![image](../assets//MarkIV/Photos/ComfortUnits.JPG)
 	
@@ -203,21 +203,24 @@ Carefully, glue the FRONT FRAME and BACK FRAME together with your Cyanoacrylate 
 
 ### Mount the OpenBCI BOARD_MOUNT
 
-Use two screws to mount the M4 Board_Mount to the Frame. Make sure that the orientation of the BOARD_HOLDER matches that of the pictures below:
+**Note: If you've received a pre-printed headset kit, this is where your assembly instructions begin.**
+
+Use two screws to mount the M4 Board_Mount to the back (more rounded end) of the frame. Make sure that the orientation of the BOARD_HOLDER matches that of the pictures below:
 
 ![image](../assets//MarkIV/Photos/Assembly_Board_Mount.JPG)
 
 ### Insert INSERTS pieces (x35) into frame
 
-**Note:** Before glueing the INSERTS into the frame ensure, that it fits properly into the frame without glue.
+**Note:** Before glueing the INSERTS into the frame, ensure that it fits properly into the frame without glue. Press inserts into position from the inside of the frame outwards. They should lie flush with the frame.
 
 ![image](../assets//MarkIV/Photos/Assembly_Insert.JPG)
 
-For each INSERT, line the inner rim of frame with glue. Then insert the INSERT so that it is flush with the frame.
+For each INSERT, line the inner rim of frame with glue. Then insert the INSERT so that it is flush with the frame like in the previous step.
 
 ![image](../assets//MarkIV/Photos/Assembly_Insert2.JPG)
 
-Your Ultracortex should now look like this with your 5 COMFORT UNITS screwed in place:
+Repeat until every circular opening in the frame contains an insert. Then insert the 5 COMFORT UNITS in the locations shown below.
+Your Ultracortex should now look like this:
 
 ![image](../assets//MarkIV/Photos/Assembly_Comfort.JPG)
 
@@ -229,6 +232,17 @@ Connect your ~500 mAh lithium ion rechargeable batter to the back of your Cyton 
 
 <!--![image](../assets/MarkIV/Photos/Assembly_Board_Cover.JPG)-->
 
+### Placement of Nodes
+
+First screw your two FLAT ELECTRODE UNITS in the front two nodes of the frame (opposite of the BOARD_MOUNT). 
+
+![image](../assets//MarkIV/Photos/Assembly_Comfort_Flat.JPG)
+
+Then screw 6 SPIKEY ELECTRODE UNITS in the following nodes of the frame. 
+
+![image](../assets//MarkIV/Photos/Assembly_CFS.JPG)
+
+
 ### Identify electrode locations
 
 Before creating your electrode mounts, it's a good idea to think about where you may want to place the electrodes on the Ultracortex FRAME. The placement of the electrode may affect how long you make the wire between the electrode and where the OpenBCI is mounted, at the back of the frame.
@@ -237,7 +251,7 @@ The Ultracortex node locations are based on the [10-20 system](https://goo.gl/gS
 
 The images below indicates the default 10-20 electrode locations that the OpenBCI Graphical User Interface expects. This application is great for viewing/recording your EEG and can be found in our [OpenBCI_Processing](http://) repo. The blue nodes indicate the 8 default 10-20 locations (channels 1-8) of the Cyton Board. The red nodes indicate the default 10-20 locations of channels 9-16 when using the OpenBCI 16-channel R&D Kit. 
 
-For the remainder of this tutorial, the blue nodes on the 10-20 system diagram (channels 1-8 of the OpenBCI default settings) will be used. The channel to 10-20 system correlations are as follows:
+For the remainder of this tutorial, the blue nodes on the 10-20 system diagram (channels 1-8 of the OpenBCI default settings) will be used. Each input pin, or "channel", on your Cyton or Ganglion board corresponds to one of the node positions below. The channel to 10-20 system correlations are as follows:
 
 * Channel 1(N1P) - Fp1
 * Channel 2(N2P) - Fp2
@@ -250,16 +264,6 @@ For the remainder of this tutorial, the blue nodes on the 10-20 system diagram (
 
 ![image](../assets/UCM3_Nova_Revised-image_assets/1020.jpg)
 
-### placement of Nodes
-
-First screw your two FLAT ELECTRODE UNITS in the front two nodes of the frame. 
-
-![image](../assets//MarkIV/Photos/Assembly_Comfort_Flat.JPG)
-
-Then screw 6 SPIKEY ELECTRODE UNITS in the following nodes of the frame. 
-
-![image](../assets//MarkIV/Photos/Assembly_CFS.JPG)
-
 ### Connect wiring to OpenBCI
 
 You will find 3 ribbon cables in your kit as seen below.
@@ -270,25 +274,18 @@ Peel off the GRAY and PURPLE from the 12" set and the BLUE, GREEN, ORANGE and YE
 
 ![image](../assets//MarkIV/Photos/Assembly_8Chan_Cables.JPG)
 
-Than plug the male end in to the header cable on the NODES as seen below.
+In order to connect a wire to an electrode unit, plug the male end in to the header cable on the NODES as seen below.
 
 ![image](../assets//MarkIV/Photos/Assembly_Node_Plug.JPG)
 
-Run wires back to our OPENBCI Board and secure with wire clips. As mentioned above, if you're using the default OpenBCI electrode configuration, cut the wires so that they terminate at the following nodes:
+Connect the GREY and PURPLE wires to electrode units 1 and 2, the BLUE, GREEN, ORANGE and YELLOW wires to electrode units 3, 4, 5 and 6, and the RED and BROWN wires to electrode units 7 and 8. Refer to the diagram in the previous step to see the numbering of the electrode units. Then, connect the wire for each electrode to the corresponding pin on your OpenBCI board (electrode unit 1 to pin N1P, electrode unit 2 to pin N2p, electrode unit 3 to pin N3p...). Connect wires to the _bottom_ pin, or the pin further from the LED side, out of each pair.
 
-* Channel 1(N1P) - Fp1
-* Channel 2(N2P) - Fp2
-* Channel 3(N3P) - C3
-* Channel 4(N4P) - C4
-* Channel 5(N5P) - P7
-* Channel 6(N6P) - P8
-* Channel 7(N7P) - O1
-* Channel 8(N8P) - O2 
+Once connected, secure loose wires to the frame using clips.
 
 ![image](../assets//MarkIV/Photos/Assembly_Wire_Clip.JPG)
 ![image](../assets//MarkIV/Photos/Assembly_Wire_Clip2.JPG)
 
-Your headset should look like this when your finished assembeling the 8 channels. 16 channel see instructions below on how to add nodes.
+Your headset should look like this when your finished assembeling the 8 channels. For 16 channel boards, see instructions below on how to add nodes.
 
 ![image](../assets//MarkIV/Photos/Assembly_8Chan_Finished.JPG)
 ![image](../assets//MarkIV/Photos/Assembly_8Chan_Finished2.JPG)
@@ -353,7 +350,7 @@ Run wires back to our OPENBCI Board and secure with wire clips. As mentioned abo
 
 ### Adjust the Ultracortex for your head
 
-Put the Ultracortex Mark 4 onto your head and gradually tighten the electrode units until the electrodes are snuggly (but comfortably) against your scalp. If it is difficult to twist the ELECTRODE & COMFORT UNITS by hand
+Put the Ultracortex Mark 4 onto your head and gradually adjust the electrode units until the electrodes are snugly (but comfortably) against your scalp. To tighten an electrode, rotate it it clockwise.
 
 **Be careful** not to strain the electrode wires when twisting the electrode unit with the  ELECTRODE UNITS, or you may separate the wire from the electrode itself. 
 
